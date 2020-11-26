@@ -1,0 +1,14 @@
+name: Build images
+on:
+  pull_request:
+jobs:
+  image:
+    name: build container images
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: make ubuntu
+      - run: make node
+      - run: make nginx
+      - run: make elasticsearch
+      - run: make python
