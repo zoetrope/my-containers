@@ -15,7 +15,7 @@ jobs:
       - run: make elasticsearch
       - run: make python
       - name: Login to ghcr.io
-        run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
+        run: echo ${{ secrets.CR_PAT }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
       - run: make push-ubuntu
       - run: make push-node
       - run: make push-nginx
