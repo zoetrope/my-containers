@@ -6,7 +6,7 @@ ENV GOPATH=/go
 ENV GOCACHE=/tmp/.cache/go-build
 ENV PATH=/go/bin:/usr/local/go/bin:"$PATH"
 
-ARG GO_VERSION=1.15.3
+ARG GO_VERSION=1.17.1
 USER root
 WORKDIR /work
 
