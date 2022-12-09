@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:7.16.3
+FROM docker.elastic.co/elasticsearch/elasticsearch:8.5.3
 
 LABEL org.opencontainers.image.source https://github.com/zoetrope/my-containers
 

@@ -2,7 +2,7 @@ FROM ghcr.io/zoetrope/ubuntu:20.04
 
 LABEL org.opencontainers.image.source https://github.com/zoetrope/my-containers
 
-ARG NODE_VERSION=16.x
+ARG NODE_VERSION=18.x
 
 USER root
 RUN curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \

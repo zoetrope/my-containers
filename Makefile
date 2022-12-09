@@ -10,35 +10,35 @@ push-ubuntu: ubuntu
 
 .PHONY: elasticsearch
 elasticsearch:
-	docker build --no-cache -t $(REGISTRY)elasticsearch:7.16.3 ./elasticsearch
+	docker build --no-cache -t $(REGISTRY)elasticsearch:8.5.3 ./elasticsearch
 
 .PHONY: push-elasticsearch
 push-elasticsearch: elasticsearch
-	docker push $(REGISTRY)elasticsearch:7.16.3
+	docker push $(REGISTRY)elasticsearch:8.5.3
 
 .PHONY: golang
 golang:
-	docker build --no-cache -t $(REGISTRY)golang:1.17.6 ./golang
+	docker build --no-cache -t $(REGISTRY)golang:1.19.4 ./golang
 
 .PHONY: push-golang
 push-golang: golang
-	docker push $(REGISTRY)golang:1.17.6
+	docker push $(REGISTRY)golang:1.19.4
 
 .PHONY: nginx
 nginx:
-	docker build --no-cache -t $(REGISTRY)nginx:1.20.2 ./nginx
+	docker build --no-cache -t $(REGISTRY)nginx:1.22.1 ./nginx
 
 .PHONY: push-nginx
 push-nginx: nginx
-	docker push $(REGISTRY)nginx:1.20.2
+	docker push $(REGISTRY)nginx:1.22.1
 
 .PHONY: node
 node:
-	docker build --no-cache -t $(REGISTRY)node:16.13.2 ./node
+	docker build --no-cache -t $(REGISTRY)node:18.12.1 ./node
 
 .PHONY: push-node
 push-node: node
-	docker push $(REGISTRY)node:16.13.2
+	docker push $(REGISTRY)node:18.12.1
 
 
 .PHONY: python
