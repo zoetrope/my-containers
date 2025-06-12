@@ -1,12 +1,12 @@
-FROM ghcr.io/zoetrope/ubuntu:20.04
+FROM ghcr.io/zoetrope/ubuntu:22.04
 
-LABEL org.opencontainers.image.source https://github.com/zoetrope/my-containers
+LABEL org.opencontainers.image.source=https://github.com/zoetrope/my-containers
 
 ENV GOPATH=/go
 ENV GOCACHE=/tmp/.cache/go-build
 ENV PATH=/go/bin:/usr/local/go/bin:"$PATH"
 
-ARG GO_VERSION=1.19.4
+ARG GO_VERSION=1.24.4
 USER root
 WORKDIR /work
 
